@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  .btn-primary {
+    @apply bg-kulachi-charcoal text-white px-6 py-3 uppercase tracking-wider text-sm hover:bg-gray-800 transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply border border-kulachi-charcoal text-kulachi-charcoal px-6 py-3 uppercase tracking-wider text-sm hover:bg-kulachi-charcoal hover:text-white transition-colors duration-200;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl text-kulachi-charcoal text-center mb-8;
+  }
+
+  .product-card {
+    cursor: pointer;
+  }
+
+  .product-image-container {
+    @apply relative overflow-hidden bg-kulachi-offwhite aspect-[3/4];
+  }
+
+  .product-image {
+    @apply w-full h-full object-cover transition-transform duration-500;
+  }
+  
+  .group:hover .product-image {
+    transform: scale(1.05);
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
