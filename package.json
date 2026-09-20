@@ -1,0 +1,44 @@
+{
+  "name": "kulachi-wear",
+  "version": "1.0.0",
+  "description": "Kulachi Wear - Premium Women's Clothing",
+  "scripts": {
+    "dev": "next dev",
+    "build": "prisma generate && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@libsql/client": "^0.18.0",
+    "@prisma/adapter-libsql": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/react": "^19.3.0",
+    "@types/sharp": "^0.31.1",
+    "@types/uuid": "^10.0.0",
+    "bcryptjs": "^3.0.3",
+    "eslint": "^10.11.0",
+    "eslint-config-next": "^16.3.5",
+    "jose": "^6.2.12",
+    "next": "^14.2.35",
+    "prisma": "^7.10.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.35.4",
+    "uuid": "^14.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
