@@ -105,7 +105,7 @@ export default async function ProductPage({ params }: Props) {
               <span className="font-sans text-xs uppercase tracking-wider text-gray-500">Category</span>
               <div className="flex flex-wrap gap-2 mt-2">
                 {product.categories.map((pc) => (
-                  <span key={pc.id} className="px-3 py-1 bg-kulachi-offwhite text-kulachi-charcoal text-sm">
+                  <span key={pc.categoryId + pc.productId} className="px-3 py-1 bg-kulachi-offwhite text-kulachi-charcoal text-sm">
                     {pc.category.name}
                   </span>
                 ))}
@@ -120,7 +120,7 @@ export default async function ProductPage({ params }: Props) {
               <div className="flex flex-wrap gap-2 mt-2">
                 {product.collections.map((pc) => (
                   <a 
-                    key={pc.id}
+                    key={pc.collectionId + pc.productId}
                     href={`/collections/${pc.collection.slug}`}
                     className="px-3 py-1 border border-gray-300 text-gray-600 text-sm hover:border-kulachi-charcoal hover:text-kulachi-charcoal transition-colors"
                   >

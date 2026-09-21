@@ -14,7 +14,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const { q } = await searchParams
   const query = q || ''
   
-  let products = []
+  let products: Awaited<ReturnType<typeof getAllProducts>> = []
   if (query) {
     products = await getAllProducts({ search: query, limit: 100 })
   }
